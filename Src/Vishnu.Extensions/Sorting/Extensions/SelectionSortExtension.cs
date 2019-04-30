@@ -6,11 +6,13 @@ using Vishnu.Extensions.Sorting.Helpers;
 
 namespace Vishnu.Extension.Sorting
 {
+    /// <summary>
+    /// Extension methods for Selection sort
+    /// </summary>
     public static class SelectionSortExtension
     {
         /// <summary>
-        /// The algorithm works by selecting the smallest unsorted item
-        /// and then swapping it with the item in the next position to be filled.
+        /// Sorts input in ascending order using Selection sort technique
         /// </summary>
         /// <typeparam name="T">Type of data</typeparam>
         /// <param name="sort">ISort</param>
@@ -24,8 +26,7 @@ namespace Vishnu.Extension.Sorting
         }
 
         /// <summary>
-        /// The algorithm works by selecting the smallest unsorted item
-        /// and then swapping it with the item in the next position to be filled.
+        /// Sorts input in ascending order using Selection sort technique
         /// </summary>
         /// <typeparam name="T">Type of data</typeparam>
         /// <param name="sort">ISort</param>
@@ -38,8 +39,7 @@ namespace Vishnu.Extension.Sorting
         }
 
         /// <summary>
-        /// The algorithm works by selecting the smallest unsorted item
-        /// and then swapping it with the item in the next position to be filled.
+        /// Sorts input in ascending order using Selection sort technique
         /// </summary>
         /// <param name="sort">ISort</param>
         /// <param name="input">input data</param>
@@ -51,8 +51,7 @@ namespace Vishnu.Extension.Sorting
         }
 
         /// <summary>
-        /// The algorithm works by selecting the smallest unsorted item
-        /// and then swapping it with the item in the next position to be filled.
+        /// Sorts input in ascending order using Selection sort technique
         /// </summary>
         /// <param name="sort">ISort</param>
         /// <param name="sortingAlgorithmFactory">Sorting algorithm factory</param>

@@ -4,6 +4,9 @@ using System.Text;
 
 namespace Vishnu.Extension.Sorting
 {
+    /// <summary>
+    /// Sorting interface
+    /// </summary>
     public interface ISort
     {
     }

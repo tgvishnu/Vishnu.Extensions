@@ -6,13 +6,13 @@ using Vishnu.Extensions.Sorting.Helpers;
 
 namespace Vishnu.Extension.Sorting
 {
+    /// <summary>
+    /// Extension methods for bubble sort
+    /// </summary>
     public static class BubbleSortExtension
     {
         /// <summary>
-        /// The algorithm works by comparing each item in the list with the item next to it, 
-        /// and swapping them if required. In other words, 
-        /// the largest element has bubbled to the top of the array. The algorithm repeats this 
-        /// process until it makes a pass all the way through the list without swapping any items.
+        /// Sorts input in ascending order using Bubble sort technique
         /// </summary>
         /// <typeparam name="T">Type of data</typeparam>
         /// <param name="sort">ISort</param>
@@ -25,10 +25,7 @@ namespace Vishnu.Extension.Sorting
         }
 
         /// <summary>
-        /// The algorithm works by comparing each item in the list with the item next to it, 
-        /// and swapping them if required. In other words, 
-        /// the largest element has bubbled to the top of the array. The algorithm repeats this 
-        /// process until it makes a pass all the way through the list without swapping any items.
+        /// Sorts input in ascending order using Bubble sort technique
         /// </summary>
         /// <typeparam name="T">Type of data</typeparam>
         /// <param name="sort">ISort</param>
@@ -42,10 +39,7 @@ namespace Vishnu.Extension.Sorting
         }
 
         /// <summary>
-        /// The algorithm works by comparing each item in the list with the item next to it, 
-        /// and swapping them if required. In other words, 
-        /// the largest element has bubbled to the top of the array. The algorithm repeats this 
-        /// process until it makes a pass all the way through the list without swapping any items.
+        /// Sorts input in ascending order using Bubble sort technique
         /// </summary>
         /// <param name="sort">ISort</param>
         /// <param name="input">input data</param>
@@ -57,10 +51,7 @@ namespace Vishnu.Extension.Sorting
         }
 
         /// <summary>
-        /// The algorithm works by comparing each item in the list with the item next to it, 
-        /// and swapping them if required. In other words, 
-        /// the largest element has bubbled to the top of the array. The algorithm repeats this 
-        /// process until it makes a pass all the way through the list without swapping any items.
+        /// Sorts input in ascending order using Bubble sort technique
         /// </summary>
         /// <param name="sort">ISort</param>
         /// <param name="sortingAlgorithmFactory">Sorting algorithm factory</param>
