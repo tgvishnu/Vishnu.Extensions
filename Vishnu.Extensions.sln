@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vishnu.Extensions", "Vishnu.Extensions\Vishnu.Extensions.csproj", "{6AA83A21-7731-492F-8489-52DB249202B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vishnu.Extensions", "Src\Vishnu.Extensions\Vishnu.Extensions.csproj", "{6AA83A21-7731-492F-8489-52DB249202B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vishnu.Extensions.Test", "Test\Vishnu.Extensions.Test\Vishnu.Extensions.Test.csproj", "{43062E68-EC6B-403F-BD0D-38EC7651494B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{6AA83A21-7731-492F-8489-52DB249202B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6AA83A21-7731-492F-8489-52DB249202B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6AA83A21-7731-492F-8489-52DB249202B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43062E68-EC6B-403F-BD0D-38EC7651494B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43062E68-EC6B-403F-BD0D-38EC7651494B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43062E68-EC6B-403F-BD0D-38EC7651494B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43062E68-EC6B-403F-BD0D-38EC7651494B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
