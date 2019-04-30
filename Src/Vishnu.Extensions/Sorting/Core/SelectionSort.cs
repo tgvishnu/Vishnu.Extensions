@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Vishnu.Extensions.Sorting.Core
 {
-    public class SelectionSort<T> : ISorting<T>
+    public class SelectionSort<T> : ISortingAlgorithm<T>
     {
         private readonly IComparer<T> _comparer = null;
 

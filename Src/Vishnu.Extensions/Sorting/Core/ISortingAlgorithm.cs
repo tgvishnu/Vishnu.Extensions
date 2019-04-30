@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Vishnu.Extensions.Sorting.Core
 {
-    public interface ISorting<T>
+    public interface ISortingAlgorithm<T>
     {
         void Sort(T[] input);
     }

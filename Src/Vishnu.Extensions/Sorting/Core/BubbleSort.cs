@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Vishnu.Extensions.Sorting.Core
 { 
-    public class BubbleSort<T> : ISorting<T>
+    public class BubbleSort<T> : ISortingAlgorithm<T>
     {
         private readonly IComparer<T> _comparer = null;
         public BubbleSort(IComparer<T> comparer)
