@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Src\Vishnu.Extensions\Vishnu.Extensions.csproj" />
+    <ProjectReference Include="..\..\Src\Vishnu.Algorithm.Extensions\Vishnu.Algorithm.Extensions.csproj" />
   </ItemGroup>
 
 </Project>
