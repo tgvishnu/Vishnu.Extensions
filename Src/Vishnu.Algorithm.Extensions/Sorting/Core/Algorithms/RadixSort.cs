@@ -25,6 +25,10 @@ namespace Vishnu.Extensions.Sorting.Core
             _comparer = comparer;
         }
 
+        /// <summary>
+        /// Sorts input in ascending order
+        /// </summary>
+        /// <param name="input">input data</param>
         public virtual void Sort(int[] input)
         {
             int n = input.Length;
@@ -35,7 +39,7 @@ namespace Vishnu.Extensions.Sorting.Core
             }
         }
 
-        public void CountSort(int[] input, int n, int exp)
+        private void CountSort(int[] input, int n, int exp)
         {
             // output array
             int[] output = new int[n];

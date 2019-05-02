@@ -40,8 +40,18 @@ namespace Vishnu.Extension.Sorting
         Heap,
 
         /// <summary>
-        /// Radix sort
+        /// Shell sort
         /// </summary>
-        Radix,
+        Shell,
+
+        /// <summary>
+        /// Tim sort
+        /// </summary>
+        Tim,
+
+        /// <summary>
+        /// Comb sort
+        /// </summary>
+        Comb
     }
 }

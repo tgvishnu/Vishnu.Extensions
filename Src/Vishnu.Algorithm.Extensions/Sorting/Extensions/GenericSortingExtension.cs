@@ -22,8 +22,8 @@ namespace Vishnu.Extension.Sorting
         /// <param name="comparer"><see cref="IComparer{T}"/></param>
         internal static void Sort<T>(this ISort sort, ISortingAlgorithmFactory sortingAlgorithmFactory, SortingTypes sortingTypes, T[] input, IComparer<T> comparer)
         {
-            var bubbleSort = sortingAlgorithmFactory.Get<T>(sortingTypes, comparer);
-            bubbleSort.Sort(input);
+            var sorter = sortingAlgorithmFactory.Get<T>(sortingTypes, comparer);
+            sorter.Sort(input);
         }
 
         /// <summary>

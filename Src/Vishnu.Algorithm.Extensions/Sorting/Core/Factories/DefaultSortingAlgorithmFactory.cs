@@ -24,6 +24,12 @@ namespace Vishnu.Extensions.Sorting.Core
                     return new QuickSortLastPivot<T>(comparer);
                 case SortingTypes.Heap:
                     return new HeapSort<T>(comparer);
+                case SortingTypes.Shell:
+                    return new ShellSort<T>(comparer);
+                case SortingTypes.Tim:
+                    return new TimSort<T>(comparer);
+                case SortingTypes.Comb:
+                    return new CombSort<T>(comparer);
                 default:
                     throw new NotImplementedException(sortingTypes.ToString());
             }

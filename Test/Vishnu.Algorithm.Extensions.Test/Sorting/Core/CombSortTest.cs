@@ -8,18 +8,18 @@ using Vishnu.Extensions.Sorting.Helpers;
 namespace Vishnu.Extensions.Test.Sorting.Core
 {
     [TestFixture]
-    public class InsertionSortTest
+    public class CombSortTest
     {
         [Test]
         public void Integer_Sort_Test()
         {
             int[] data = new int[] { 5,3,8,5,1,0,8 };
             int[] expectedData = new int[] { 0, 1, 3, 5, 5, 8, 8 };
-            Algorithm.Sorting.UseInsertion( data, new IntegerComparer());
+            Algorithm.Sorting.UseComb(data, new IntegerComparer());
             Assert.AreEqual(expectedData, data);
             data = new int[] { 5, 3, 8, -1, 1, 0, 8 };
             expectedData = new int[] { -1, 0, 1, 3, 5, 8, 8 };
-            Algorithm.Sorting.UseInsertion(data, new IntegerComparer());
+            Algorithm.Sorting.UseComb(data, new IntegerComparer());
             Assert.AreEqual(expectedData, data);
         }
 
@@ -28,7 +28,7 @@ namespace Vishnu.Extensions.Test.Sorting.Core
         {
             string[] data = new string[] { "hello", null, "i", "am", null, "good", string.Empty, " "};
             string[] expectedData = new string[] { null, null, string.Empty, "i", " ", "am", "good", "hello" };
-            Algorithm.Sorting.UseInsertion(data, new StringLengthComparer());
+            Algorithm.Sorting.UseComb( data, new StringLengthComparer());
             Assert.AreEqual(expectedData, data);
         }
 
@@ -37,7 +37,7 @@ namespace Vishnu.Extensions.Test.Sorting.Core
         {
             string d = "dsaf";
             string ed = "adfs";
-            d = Algorithm.Sorting.UseInsertion(d);
+            d = Algorithm.Sorting.UseComb(d);
             Assert.AreEqual(ed, d);
         }
 
@@ -46,10 +46,11 @@ namespace Vishnu.Extensions.Test.Sorting.Core
         {
             DateTime[] data = new DateTime[] { DateTime.Now.AddDays(3), DateTime.Now.AddSeconds(10), DateTime.Now.AddSeconds(-100), DateTime.Now.AddDays(1) };
             DateTime[] actual = data;
-            Algorithm.Sorting.UseInsertion(data, new DateTimeComparer());
+            Algorithm.Sorting.UseComb(data, new DateTimeComparer());
             Assert.AreEqual(true, true);
         }
 
+        [Test]
         public void Class_Sort_Test()
         {
             List<Person> people = new List<Person>();
@@ -61,7 +62,7 @@ namespace Vishnu.Extensions.Test.Sorting.Core
             people.Add(new Person { Age = 132, Name = "name132" });
             people.Add(new Person { Age = 323, Name = "name323" });
             Person[] data = people.ToArray();
-            Algorithm.Sorting.UseInsertion(data, new PersonComparer());
+            Algorithm.Sorting.UseComb(data, new PersonComparer());
             var sortedOutput = new int[data.Length];
             for (int i = 0; i < data.Length; i++)
             {
@@ -69,5 +70,6 @@ namespace Vishnu.Extensions.Test.Sorting.Core
             }
             Assert.AreEqual(expectedOutput, sortedOutput);
         }
+
     }
 }

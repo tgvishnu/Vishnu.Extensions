@@ -49,5 +49,25 @@ namespace Vishnu.Extensions.Test.Sorting.Core
             Algorithm.Sorting.UseHeap(data, new DateTimeComparer());
             Assert.AreEqual(true, true);
         }
+
+        public void Class_Sort_Test()
+        {
+            List<Person> people = new List<Person>();
+            var expectedOutput = new int[] { 2, 3, 32, 23, 132, 323 };
+            people.Add(new Person { Age = 32, Name = "name32" });
+            people.Add(new Person { Age = 23, Name = "name23" });
+            people.Add(new Person { Age = 3, Name = "name3" });
+            people.Add(new Person { Age = 2, Name = "name2" });
+            people.Add(new Person { Age = 132, Name = "name132" });
+            people.Add(new Person { Age = 323, Name = "name323" });
+            Person[] data = people.ToArray();
+            Algorithm.Sorting.UseHeap(data, new PersonComparer());
+            var sortedOutput = new int[data.Length];
+            for(int i =0;i<data.Length; i++)
+            {
+                sortedOutput[i] = data[i].Age;
+            }
+            Assert.AreEqual(expectedOutput, sortedOutput );
+        }
     }
 }

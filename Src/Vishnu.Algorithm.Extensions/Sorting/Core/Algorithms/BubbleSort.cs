@@ -24,6 +24,10 @@ namespace Vishnu.Extensions.Sorting.Core
             _comparer = comparer;
         }
 
+        /// <summary>
+        /// Sorts input in ascending order
+        /// </summary>
+        /// <param name="input">input data</param>
         public virtual void Sort(T[] input)
         {
             for(int ii = (input.Length - 1); ii >= 0; ii--)

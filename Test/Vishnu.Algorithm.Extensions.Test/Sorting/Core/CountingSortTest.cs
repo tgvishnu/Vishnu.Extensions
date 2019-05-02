@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 using Vishnu.Extension.Sorting;
@@ -41,6 +42,7 @@ namespace Vishnu.Extensions.Test.Sorting.Core
         public void Class_Sort_Test()
         {
             List<Person> people = new List<Person>();
+            var expectedOutput = new int[] { 2, 3, 23, 32, 132, 323 };
             people.Add(new Person { Age = 32, Name = "name32" });
             people.Add(new Person { Age = 23, Name = "name23" });
             people.Add(new Person { Age = 3, Name = "name3" });
@@ -48,8 +50,13 @@ namespace Vishnu.Extensions.Test.Sorting.Core
             people.Add(new Person { Age = 132, Name = "name132" });
             people.Add(new Person { Age = 323, Name = "name323" });
             Person[] data = people.ToArray();
-            Algorithm.Sorting.UseCounting(data, (x) => x.Age );
-            Assert.AreEqual(true, true);
+            Algorithm.Sorting.UseCounting(data, x => x.Age);
+            var sortedOutput = new int[data.Length];
+            for (int i = 0; i < data.Length; i++)
+            {
+                sortedOutput[i] = data[i].Age;
+            }
+            Assert.AreEqual(expectedOutput, sortedOutput);
         }
     }
 
@@ -57,5 +64,19 @@ namespace Vishnu.Extensions.Test.Sorting.Core
     {
         public string Name { get; set; }
         public int Age { get; set; }
+
     }
+
+    public class PersonComparer : IComparer<Person>
+    {
+        public int Compare(Person x, Person y)
+        {
+            if (x.Age > y.Age)
+                return 1;
+            if (x.Age < y.Age)
+                return -1;
+            return 0;
+        }
+    }
+
 }
