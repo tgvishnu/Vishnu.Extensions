@@ -17,6 +17,8 @@ namespace Vishnu.Extensions.Sorting.Core
                     return new InsertionSort<T>(comparer);
                 case SortingTypes.Selection:
                     return new SelectionSort<T>(comparer);
+                case SortingTypes.Merge:
+                    return new MergeSort<T>(comparer);
                 default:
                     throw new NotImplementedException(sortingTypes.ToString());
             }

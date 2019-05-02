@@ -22,6 +22,11 @@ namespace Vishnu.Extension.Sorting
         /// <summary>
         /// Insertion sort
         /// </summary>
-        Insertion
+        Insertion,
+
+        /// <summary>
+        /// Merge sort
+        /// </summary>
+        Merge
     }
 }
