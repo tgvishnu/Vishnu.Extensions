@@ -8,18 +8,18 @@ using Vishnu.Extensions.Sorting.Helpers;
 namespace Vishnu.Extensions.Test.Sorting.Core
 {
     [TestFixture]
-    public class CombSortTest
+    public class CocktailSortTest
     {
         [Test]
         public void Integer_Sort_Test()
         {
             int[] data = new int[] { 5,3,8,5,1,0,8 };
             int[] expectedData = new int[] { 0, 1, 3, 5, 5, 8, 8 };
-            Algorithm.Sorting.UseComb(data, new IntegerComparer());
+            Algorithm.Sorting.UseCocktail(data, new IntegerComparer());
             Assert.AreEqual(expectedData, data);
             data = new int[] { 5, 3, 8, -1, 1, 0, 8 };
             expectedData = new int[] { -1, 0, 1, 3, 5, 8, 8 };
-            Algorithm.Sorting.UseComb(data, new IntegerComparer());
+            Algorithm.Sorting.UseCocktail(data, new IntegerComparer());
             Assert.AreEqual(expectedData, data);
         }
 
@@ -27,8 +27,8 @@ namespace Vishnu.Extensions.Test.Sorting.Core
         public void StringLenghtComparer_Sort_Test()
         {
             string[] data = new string[] { "hello", null, "i", "am", null, "good", string.Empty, " "};
-            string[] expectedData = new string[] { string.Empty, null, null, " ", "i", "am", "good", "hello" };
-            Algorithm.Sorting.UseComb( data, new StringLengthComparer());
+            string[] expectedData = new string[] { null, null, string.Empty, "i", " ", "am", "good", "hello" };
+            Algorithm.Sorting.UseCocktail( data, new StringLengthComparer());
             Assert.AreEqual(expectedData, data);
         }
 
@@ -37,7 +37,7 @@ namespace Vishnu.Extensions.Test.Sorting.Core
         {
             string d = "dsaf";
             string ed = "adfs";
-            d = Algorithm.Sorting.UseComb(d);
+            d = Algorithm.Sorting.UseCocktail(d);
             Assert.AreEqual(ed, d);
         }
 
@@ -46,7 +46,7 @@ namespace Vishnu.Extensions.Test.Sorting.Core
         {
             DateTime[] data = new DateTime[] { DateTime.Now.AddDays(3), DateTime.Now.AddSeconds(10), DateTime.Now.AddSeconds(-100), DateTime.Now.AddDays(1) };
             DateTime[] actual = data;
-            Algorithm.Sorting.UseComb(data, new DateTimeComparer());
+            Algorithm.Sorting.UseCocktail(data, new DateTimeComparer());
             Assert.AreEqual(true, true);
         }
 
@@ -62,7 +62,7 @@ namespace Vishnu.Extensions.Test.Sorting.Core
             people.Add(new Person { Age = 132, Name = "name132" });
             people.Add(new Person { Age = 323, Name = "name323" });
             Person[] data = people.ToArray();
-            Algorithm.Sorting.UseComb(data, new PersonComparer());
+            Algorithm.Sorting.UseCocktail(data, new PersonComparer());
             var sortedOutput = new int[data.Length];
             for (int i = 0; i < data.Length; i++)
             {

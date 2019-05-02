@@ -52,6 +52,11 @@ namespace Vishnu.Extension.Sorting
         /// <summary>
         /// Comb sort
         /// </summary>
-        Comb
+        Comb,
+
+        /// <summary>
+        /// Cocktail sort
+        /// </summary>
+        Cocktail
     }
 }

@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Text;
 using Vishnu.Extension.Sorting;
-using Vishnu.Extensions.Sorting.Helpers;
 
 namespace Vishnu.Extensions.Sorting.Core
 {
@@ -30,6 +29,8 @@ namespace Vishnu.Extensions.Sorting.Core
                     return new TimSort<T>(comparer);
                 case SortingTypes.Comb:
                     return new CombSort<T>(comparer);
+                case SortingTypes.Cocktail:
+                    return new CocktailSort<T>(comparer);
                 default:
                     throw new NotImplementedException(sortingTypes.ToString());
             }
