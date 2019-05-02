@@ -21,6 +21,8 @@ namespace Vishnu.Extensions.Sorting.Core
                     return new MergeSort<T>(comparer);
                 case SortingTypes.Quick_LastPivot:
                     return new QuickSortLastPivot<T>(comparer);
+                case SortingTypes.Heap:
+                    return new HeapSort<T>(comparer);
                 default:
                     throw new NotImplementedException(sortingTypes.ToString());
             }

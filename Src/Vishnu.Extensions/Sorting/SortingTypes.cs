@@ -32,6 +32,11 @@ namespace Vishnu.Extension.Sorting
         /// <summary>
         /// Quick sort (Last element as pivot)
         /// </summary>
-        Quick_LastPivot
+        Quick_LastPivot,
+
+        /// <summary>
+        /// Heap sort
+        /// </summary>
+        Heap
     }
 }
