@@ -15,7 +15,7 @@ namespace Vishnu.Extensions.Sorting.Core
     {
 
         /// <summary>
-        /// Creates new instance of <see cref="InsertionSort{T}"/> class
+        /// Creates new instance of <see cref="QuickSortLastPivot{T}"/> class
         /// </summary>
         /// <param name="comparer"><see cref="IComparer{T}"/></param>
         public QuickSortLastPivot(IComparer<T> comparer)

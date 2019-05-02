@@ -17,7 +17,7 @@ namespace Vishnu.Extensions.Sorting.Core
         private readonly IComparer<T> _comparer = null;
 
         /// <summary>
-        /// Creates new instance of <see cref="InsertionSort{T}"/> class
+        /// Creates new instance of <see cref="HeapSort{T}"/> class
         /// </summary>
         /// <param name="comparer"><see cref="IComparer{T}"/></param>
         public HeapSort(IComparer<T> comparer)

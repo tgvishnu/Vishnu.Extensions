@@ -37,6 +37,11 @@ namespace Vishnu.Extension.Sorting
         /// <summary>
         /// Heap sort
         /// </summary>
-        Heap
+        Heap,
+
+        /// <summary>
+        /// Radix sort
+        /// </summary>
+        Radix,
     }
 }

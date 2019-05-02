@@ -18,10 +18,9 @@ namespace Vishnu.Extension.Sorting
         /// <param name="sort">ISort</param>
         /// <param name="input">input data</param>
         /// <param name="comparer">Comparer must returns '1' if the first element is greater than next</param>
-        /// <returns>The ascending ordered content</returns>
-        public static T[] UseBubble<T>(this ISort sort, T[] input, IComparer<T> comparer)
+        public static void UseBubble<T>(this ISort sort, T[] input, IComparer<T> comparer)
         {
-            return sort.Sort<T>(SortingTypes.Bubble, input, comparer);
+            sort.Sort<T>(SortingTypes.Bubble, input, comparer);
         }
 
         /// <summary>
@@ -32,10 +31,9 @@ namespace Vishnu.Extension.Sorting
         /// <param name="sortingAlgorithmFactory">Sorting algorithm factory</param>
         /// <param name="input">input data</param>
         /// <param name="comparer">Comparer must returns '1' if the first element is greater than next</param>
-        /// <returns>The ascending ordered content</returns>
-        public static T[] UseBubble<T>(this ISort sort, ISortingAlgorithmFactory sortingAlgorithmFactory, T[] input, IComparer<T> comparer)
+        public static void UseBubble<T>(this ISort sort, ISortingAlgorithmFactory sortingAlgorithmFactory, T[] input, IComparer<T> comparer)
         {
-            return sort.Sort<T>(sortingAlgorithmFactory, SortingTypes.Bubble, input, comparer);
+            sort.Sort<T>(sortingAlgorithmFactory, SortingTypes.Bubble, input, comparer);
         }
 
         /// <summary>

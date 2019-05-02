@@ -9,7 +9,7 @@ namespace Vishnu.Extension.Sorting
     /// <summary>
     /// Generic sorting methods
     /// </summary>
-    public static class GenericSortingExtension
+    internal static class GenericSortingExtension
     {
         /// <summary>
         /// Sorts input based on the <see cref="SortingTypes"/> and <see cref="ISortingAlgorithmFactory"/>
@@ -20,12 +20,10 @@ namespace Vishnu.Extension.Sorting
         /// <param name="sortingTypes"><see cref="SortingTypes"/></param>
         /// <param name="input">input</param>
         /// <param name="comparer"><see cref="IComparer{T}"/></param>
-        /// <returns>Sorted input</returns>
-        public static T[] Sort<T>(this ISort sort, ISortingAlgorithmFactory sortingAlgorithmFactory, SortingTypes sortingTypes, T[] input, IComparer<T> comparer)
+        internal static void Sort<T>(this ISort sort, ISortingAlgorithmFactory sortingAlgorithmFactory, SortingTypes sortingTypes, T[] input, IComparer<T> comparer)
         {
             var bubbleSort = sortingAlgorithmFactory.Get<T>(sortingTypes, comparer);
             bubbleSort.Sort(input);
-            return input;
         }
 
         /// <summary>
@@ -36,10 +34,9 @@ namespace Vishnu.Extension.Sorting
         /// <param name="sortingTypes"><see cref="SortingTypes"/></param>
         /// <param name="input">input</param>
         /// <param name="comparer"><see cref="IComparer{T}"/></param>
-        /// <returns>Sorted input</returns>
-        public static T[] Sort<T>(this ISort sort, SortingTypes sortingTypes, T[] input, IComparer<T> comparer)
+        internal static void Sort<T>(this ISort sort, SortingTypes sortingTypes, T[] input, IComparer<T> comparer)
         {
-            return sort.Sort<T>(new DefaultSortingAlgorithmFactory(), sortingTypes, input, comparer);
+            sort.Sort<T>(new DefaultSortingAlgorithmFactory(), sortingTypes, input, comparer);
         }
 
         /// <summary>
@@ -51,7 +48,7 @@ namespace Vishnu.Extension.Sorting
         /// <param name="input">input</param>
         /// <param name="comparer"><see cref="IComparer{T}"/></param>
         /// <returns>sorted input</returns>
-        public static string Sort(this ISort sort, ISortingAlgorithmFactory sortingAlgorithmFactory, SortingTypes sortingTypes, string input, IComparer<char> comparer = null)
+        internal static string Sort(this ISort sort, ISortingAlgorithmFactory sortingAlgorithmFactory, SortingTypes sortingTypes, string input, IComparer<char> comparer = null)
         {
             if (string.IsNullOrEmpty(input) || string.IsNullOrWhiteSpace(input))
             {
@@ -74,7 +71,7 @@ namespace Vishnu.Extension.Sorting
         /// <param name="comparer"><see cref="IComparer{T}"/></param>
         /// <returns>sorted input</returns>
 
-        public static string Sort(this ISort sort, SortingTypes sortingTypes, string input, IComparer<char> comparer = null)
+        internal static string Sort(this ISort sort, SortingTypes sortingTypes, string input, IComparer<char> comparer = null)
         {
             return sort.Sort(new DefaultSortingAlgorithmFactory(), sortingTypes, input, comparer);
         }

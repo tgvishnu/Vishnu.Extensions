@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using Vishnu.Extension.Sorting;
+using Vishnu.Extensions.Sorting.Helpers;
 
 namespace Vishnu.Extensions.Sorting.Core
 {
