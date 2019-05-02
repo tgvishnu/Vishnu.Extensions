@@ -27,6 +27,11 @@ namespace Vishnu.Extension.Sorting
         /// <summary>
         /// Merge sort
         /// </summary>
-        Merge
+        Merge,
+
+        /// <summary>
+        /// Quick sort (Last element as pivot)
+        /// </summary>
+        Quick_LastPivot
     }
 }
