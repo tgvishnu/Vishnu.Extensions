@@ -64,16 +64,29 @@ namespace Vishnu.Extensions.Test.Sorting.Core
     {
         public string Name { get; set; }
         public int Age { get; set; }
+        public int Salary { get; set; }
 
     }
 
-    public class PersonComparer : IComparer<Person>
+    public class PersonAgeComparer : IComparer<Person>
     {
         public int Compare(Person x, Person y)
         {
             if (x.Age > y.Age)
                 return 1;
             if (x.Age < y.Age)
+                return -1;
+            return 0;
+        }
+    }
+
+    public class PersonSalaryComparer : IComparer<Person>
+    {
+        public int Compare(Person x, Person y)
+        {
+            if (x.Salary > y.Salary)
+                return 1;
+            if (x.Salary < y.Salary)
                 return -1;
             return 0;
         }

@@ -57,6 +57,16 @@ namespace Vishnu.Extension.Sorting
         /// <summary>
         /// Cocktail sort
         /// </summary>
-        Cocktail
+        Cocktail,
+
+        /// <summary>
+        /// Pancake sort
+        /// </summary>
+        Pancake,
+
+        /// <summary>
+        /// Bitonic sort
+        /// </summary>
+        Bitonic
     }
 }

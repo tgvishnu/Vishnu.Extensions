@@ -62,7 +62,7 @@ namespace Vishnu.Extensions.Test.Sorting.Core
             people.Add(new Person { Age = 132, Name = "name132" });
             people.Add(new Person { Age = 323, Name = "name323" });
             Person[] data = people.ToArray();
-            Algorithm.Sorting.UseBubble(data, new PersonComparer());
+            Algorithm.Sorting.UseBubble(data, new PersonAgeComparer());
             var sortedOutput = new int[data.Length];
             for (int i = 0; i < data.Length; i++)
             {

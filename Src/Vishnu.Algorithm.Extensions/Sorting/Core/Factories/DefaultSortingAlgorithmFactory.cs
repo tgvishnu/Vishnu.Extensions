@@ -31,6 +31,10 @@ namespace Vishnu.Extensions.Sorting.Core
                     return new CombSort<T>(comparer);
                 case SortingTypes.Cocktail:
                     return new CocktailSort<T>(comparer);
+                case SortingTypes.Pancake:
+                    return new PancakeSort<T>(comparer);
+                case SortingTypes.Bitonic:
+                    return new BitonicSort<T>(comparer);
                 default:
                     throw new NotImplementedException(sortingTypes.ToString());
             }
