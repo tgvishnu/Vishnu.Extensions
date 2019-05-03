@@ -10,10 +10,17 @@ If you like or are using this project please give it a star. Thanks!
 ###### 
 ```c#
     
+  // Perform sorting using algorithms defined in DefaultAlgorithm factory
   Algorithm.Sorting.Use{ALGORITHM_NAME}<TYPE>(<TYPE> input, IComparer<TYPE>); 
+  
+  // Perform sorting using algorithms defined in Custom algorithm factory
   Algorithm.Sorting.Use{ALGORITHM_NAME}<TYPE>(ISortingAlgorithmFactory sortingAlgorithmFactory, <TYPE> input,  IComparer<TYPE>);        
+  
+  // Peform sorting on strings using algorithms with default IComparer<char>
   string sortedString = Algorithm.Sorting.Use{ALGORITHM_NAME}(string input);
-   string sortedString = Algorithm.Sorting.Use{ALGORITHM_NAME}(string input, {IComparer<char>});
+  
+  // Perform sorting on string using algorithm with custom IComparer<char>
+  string sortedString = Algorithm.Sorting.Use{ALGORITHM_NAME}(string input, {IComparer<char>});
  
 ```  
    
