@@ -4,7 +4,7 @@ using System.Text;
 using Vishnu.Extensions.Sorting.Core;
 using Vishnu.Extensions.Sorting.Helpers;
 
-namespace Vishnu.Extension.Sorting
+namespace Vishnu.Extensions.Sorting
 {
     /// <summary>
     /// Extension methods for Bitonic sort
@@ -19,7 +19,7 @@ namespace Vishnu.Extension.Sorting
         /// <param name="sort">ISort</param>
         /// <param name="input">input data</param>
         /// <param name="comparer">Comparer must returns '1' if the first element is greater than next</param>
-        public static void UseBitonic<T>(this ISort sort, T[] input, IComparer<T> comparer)
+        public static void UseBitonic<T>(this ISorting sort, T[] input, IComparer<T> comparer)
         {
             sort.Sort<T>(SortingTypes.Bitonic, input, comparer);
         }
@@ -33,7 +33,7 @@ namespace Vishnu.Extension.Sorting
         /// <param name="sortingAlgorithmFactory">Sorting algorithm factory</param>
         /// <param name="input">input data</param>
         /// <param name="comparer">Comparer must returns '1' if the first element is greater than next</param>
-        public static void UseBitonic<T>(this ISort sort, ISortingAlgorithmFactory sortingAlgorithmFactory, T[] input, IComparer<T> comparer)
+        public static void UseBitonic<T>(this ISorting sort, ISortingAlgorithmFactory sortingAlgorithmFactory, T[] input, IComparer<T> comparer)
         {
             sort.Sort<T>(sortingAlgorithmFactory, SortingTypes.Bitonic, input, comparer);
         }
@@ -46,7 +46,7 @@ namespace Vishnu.Extension.Sorting
         /// <param name="input">input data</param>
         /// <param name="comparer">Comparer must returns '1' if the first element is greater than next</param>
         /// <returns>The ascending ordered content</returns>
-        public static string UseBitonic(this ISort sort, string input, IComparer<char> comparer = null)
+        public static string UseBitonic(this ISorting sort, string input, IComparer<char> comparer = null)
         {
             return sort.Sort(SortingTypes.Bitonic, input, comparer);
         }
@@ -60,7 +60,7 @@ namespace Vishnu.Extension.Sorting
         /// <param name="input">input data</param>
         /// <param name="comparer">Comparer must returns '1' if the first element is greater than next</param>
         /// <returns>The ascending ordered content</returns>
-        public static string UseBitonic(this ISort sort, ISortingAlgorithmFactory sortingAlgorithmFactory, string input, IComparer<char> comparer = null)
+        public static string UseBitonic(this ISorting sort, ISortingAlgorithmFactory sortingAlgorithmFactory, string input, IComparer<char> comparer = null)
         {
             return sort.Sort(sortingAlgorithmFactory, SortingTypes.Bitonic, input, comparer);
         }

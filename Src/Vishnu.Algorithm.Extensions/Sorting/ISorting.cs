@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Vishnu.Extension.Sorting
+namespace Vishnu.Extensions.Sorting
 {
     /// <summary>
     /// Sorting interface
     /// </summary>
-    public interface ISort
+    public interface ISorting
     {
     }
 }

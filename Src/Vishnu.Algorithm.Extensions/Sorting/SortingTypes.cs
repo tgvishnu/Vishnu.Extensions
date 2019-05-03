@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Vishnu.Extension.Sorting
+namespace Vishnu.Extensions.Sorting
 {
     /// <summary>
     /// Defines various sorting types

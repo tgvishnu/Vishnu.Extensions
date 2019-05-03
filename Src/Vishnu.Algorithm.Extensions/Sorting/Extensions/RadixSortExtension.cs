@@ -4,7 +4,7 @@ using System.Text;
 using Vishnu.Extensions.Sorting.Core;
 using Vishnu.Extensions.Sorting.Helpers;
 
-namespace Vishnu.Extension.Sorting
+namespace Vishnu.Extensions.Sorting
 {
     /// <summary>
     /// Extension methods for Radix sort
@@ -18,7 +18,7 @@ namespace Vishnu.Extension.Sorting
         /// <param name="sort">ISort</param>
         /// <param name="input">input data</param>
         /// <param name="comparer">Comparer must returns '1' if the first element is greater than next</param>
-        public static void UseRadix(this ISort sort, int[] input)
+        public static void UseRadix(this ISorting sort, int[] input)
         {
             var radix = new RadixSort(new IntegerComparer());
             radix.Sort(input);
@@ -31,7 +31,7 @@ namespace Vishnu.Extension.Sorting
         /// <param name="sort">ISort</param>
         /// <param name="input">input data</param>
         /// <param name="comparer">Comparer must returns '1' if the first element is greater than next</param>
-        public static void UseRadix(this ISort sort, int[] input, IComparer<int> comparer)
+        public static void UseRadix(this ISorting sort, int[] input, IComparer<int> comparer)
         {
             var radix = new RadixSort(comparer);
             radix.Sort(input);

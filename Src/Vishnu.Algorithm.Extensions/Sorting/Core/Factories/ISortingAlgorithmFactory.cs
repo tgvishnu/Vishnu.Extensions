@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Vishnu.Extension.Sorting;
+using Vishnu.Extensions.Sorting;
 
 namespace Vishnu.Extensions.Sorting.Core
 {
