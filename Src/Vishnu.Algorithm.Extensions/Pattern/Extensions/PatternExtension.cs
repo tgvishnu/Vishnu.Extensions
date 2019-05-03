@@ -110,5 +110,19 @@ namespace Vishnu.Extensions.Pattern
         //{
         //    return new BooyerMooreAlgorithm(text, pattern).Search();
         //}
+
+        /// <summary>
+        /// Use Z algorithm for searching pattern.
+        /// This algorithm finds all occurrences of a pattern in a text in linear time. 
+        /// Let length of text be n and of pattern be m, then total time taken is O(m + n) with linear space complexity
+        /// </summary>
+        /// <param name="patternSearch"><see cref="IPattern"/></param>
+        /// <param name="text">input text</param>
+        /// <param name="pattern">pattern text</param>
+        /// <returns>List of positions of pattern</returns>
+        public static IList<int> UseZ(this IPattern patternSearch, string text, string pattern)
+        {
+            return new ZAlgorithm(text, pattern).Search();
+        }
     }
 }
