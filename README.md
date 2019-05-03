@@ -44,8 +44,9 @@ If you like or are using this project please give it a star. Thanks!
 -  IntegerComparer
 -  StringLengthComparer
 
-New comparer must implement IComparer<T> interface
-> IComparer<T> must always
+Custom comparer must implement IComparer<T> interface
+   
+IComparer<T> must always
 >   - return 1 if first element > second element
 >   - return -1 if first element < second element
 >   - return 0 if first element == second element
