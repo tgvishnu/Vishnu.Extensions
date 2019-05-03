@@ -1,5 +1,5 @@
 # Vishnu.Extensions
-## This package supports various algorithms for performing
+## This package supports various algorithms for
    - Sorting contents.
    - Pattern searching in strings
 ## Give a Star! :star:
