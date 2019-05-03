@@ -4,14 +4,15 @@
    - Pattern searching in strings
 ## Give a Star! :star:
 If you like or are using this project please give it a star. Thanks!
+<hr />
 
-> # Sorting
+# Sorting
 
 <hr/>
 
-## Description (Sorting)
+>#### Description (Sorting)
 
-###### 
+ 
 ```c#
     
   // Perform sorting using algorithms defined in DefaultAlgorithm factory
@@ -28,7 +29,7 @@ If you like or are using this project please give it a star. Thanks!
  
 ```  
    
-## Usage (Sorting)
+>#### Usage (Sorting)
 
 ```c#
      // sorting array of integers
@@ -48,7 +49,7 @@ If you like or are using this project please give it a star. Thanks!
      Algorithm.Sorting.UseCocktail(data, new PersonAgeComparer());    
     
 ```
-## Available IComparer<T>  (Sorting)
+>#### Available IComparer<T>  (Sorting)
 
 -  AsciiValueComparer
 -  DateTimeComparer
@@ -58,9 +59,9 @@ If you like or are using this project please give it a star. Thanks!
 Custom comparer must implement IComparer<T> interface
    
 IComparer<T> must always
->   - return 1 if first element > second element
->   - return -1 if first element < second element
->   - return 0 if first element == second element
+   - return 1 if first element > second element
+   - return -1 if first element < second element
+   - return 0 if first element == second element
  
 ```c#
 
@@ -77,7 +78,7 @@ IComparer<T> must always
     }
 
 ```
-## Supported algorithms (Sorting)
+>#### Supported algorithms (Sorting)
 
 - ** Algorithm.Sorting.UseCocktail**
 - ** Algorithm.Sorting.UseBitonic**
@@ -94,7 +95,7 @@ IComparer<T> must always
 - ** Algorithm.Sorting.UseShell**
 - ** Algorithm.Sorting.UseTim**
 
-## Extension for adding new (Sorting) algorithms
+###### Extension for adding new (Sorting) algorithms
 
 New algorithms can be added by extending ** ISorting ** interface using extension methods
 
@@ -112,4 +113,8 @@ New algorithms can be added by extending ** ISorting ** interface using extensio
     
 ```
 
+<hr />
 
+ ## Pattern Searching
+
+<hr/>
