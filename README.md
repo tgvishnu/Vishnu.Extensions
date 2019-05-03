@@ -10,7 +10,7 @@ If you like or are using this project please give it a star. Thanks!
 
 <hr/>
 
->## Description (Sorting)
+>## Description
 
  
 ```c#
@@ -29,7 +29,7 @@ If you like or are using this project please give it a star. Thanks!
  
 ```  
    
->## Usage (Sorting)
+>## Usage
 
 ```c#
      // sorting array of integers
@@ -49,7 +49,7 @@ If you like or are using this project please give it a star. Thanks!
      Algorithm.Sorting.UseCocktail(data, new PersonAgeComparer());    
     
 ```
->## Available IComparer<T>  (Sorting)
+>## Available IComparer<T> 
 
 -  AsciiValueComparer
 -  DateTimeComparer
@@ -78,7 +78,7 @@ IComparer<T> must always
     }
 
 ```
->## Supported algorithms (Sorting)
+>## Supported algorithms
 
 - ** Algorithm.Sorting.UseCocktail**
 - ** Algorithm.Sorting.UseBitonic**
@@ -95,7 +95,7 @@ IComparer<T> must always
 - ** Algorithm.Sorting.UseShell**
 - ** Algorithm.Sorting.UseTim**
 
->## Extension for adding new (Sorting) algorithms
+>## Extension for adding new Sorting algorithms
 
 New algorithms can be added by extending ** ISorting ** interface using extension methods
 
@@ -113,6 +113,64 @@ New algorithms can be added by extending ** ISorting ** interface using extensio
     
 ```
 
- # Pattern Searching
+ # 2. Pattern Searching
 
 <hr/>
+
+>## Description 
+
+ 
+```c#
+
+  // Returns list of position of the pattern found in the text based on the algorithm used.    
+  IList<int> positions = Algorithm.PatternSearch.Use{ALGORITHNM_NAME} (string text, string pattern)
+   
+```
+>## Usage
+
+```c#
+
+     var text = "THIS IS A TEST TSET";
+     var pattern = "TEST";            
+     var result = Algorithm.PatternSearch.UseAnagram(text, pattern);  
+     
+```
+
+>## Supported algorithms
+
+- ** Algorithm.PatternSearch.UseAnagram**
+- ** Algorithm.PatternSearch.UseNaive**
+- ** Algorithm.PatternSearch.UseKmp**
+- ** Algorithm.PatternSearch.UseRabinKrap**
+- ** Algorithm.PatternSearch.UseFinateAutomata**
+- ** Algorithm.PatternSearch.UseEfficientFinateAutomata**
+- ** Algorithm.PatternSearch.UseBitap**
+- ** Algorithm.PatternSearch.UseZ**
+
+
+>## Extension for adding new Pattern searching algorithms
+
+New algorithms can be added by extending ** IPattern ** interface using extension methods
+
+```c#
+
+  namespace Vishnu.Extensions.Pattern
+  {
+      public static class FooAlgorithmPatternExtension
+      {
+          public static IList<int> UseFoo(this IPattern patternSearch, string text, string pattern)
+          {
+              // Foo algorithm logic
+          }
+      }
+  }
+
+```
+    
+<hr />
+
+# References
+
+1. https://www.geeksforgeeks.org
+2. https://www.programmingalgorithms.com
+
