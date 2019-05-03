@@ -6,11 +6,11 @@
 If you like or are using this project please give it a star. Thanks!
 <hr />
 
-# Sorting
+# 1. Sorting
 
 <hr/>
 
->#### Description (Sorting)
+>## Description (Sorting)
 
  
 ```c#
@@ -29,7 +29,7 @@ If you like or are using this project please give it a star. Thanks!
  
 ```  
    
->#### Usage (Sorting)
+>## Usage (Sorting)
 
 ```c#
      // sorting array of integers
@@ -49,7 +49,7 @@ If you like or are using this project please give it a star. Thanks!
      Algorithm.Sorting.UseCocktail(data, new PersonAgeComparer());    
     
 ```
->#### Available IComparer<T>  (Sorting)
+>## Available IComparer<T>  (Sorting)
 
 -  AsciiValueComparer
 -  DateTimeComparer
@@ -78,7 +78,7 @@ IComparer<T> must always
     }
 
 ```
->#### Supported algorithms (Sorting)
+>## Supported algorithms (Sorting)
 
 - ** Algorithm.Sorting.UseCocktail**
 - ** Algorithm.Sorting.UseBitonic**
@@ -95,7 +95,7 @@ IComparer<T> must always
 - ** Algorithm.Sorting.UseShell**
 - ** Algorithm.Sorting.UseTim**
 
-###### Extension for adding new (Sorting) algorithms
+>## Extension for adding new (Sorting) algorithms
 
 New algorithms can be added by extending ** ISorting ** interface using extension methods
 
