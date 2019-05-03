@@ -4,7 +4,7 @@
    - Pattern searching in strings
 ## Give a Star! :star:
 If you like or are using this project please give it a star. Thanks!
-<hr />
+
 
 # 1. Sorting
 
@@ -113,8 +113,6 @@ New algorithms can be added by extending ** ISorting ** interface using extensio
     
 ```
 
-<hr />
-
- ## Pattern Searching
+ # Pattern Searching
 
 <hr/>
