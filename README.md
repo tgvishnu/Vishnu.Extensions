@@ -14,34 +14,56 @@ If you like or are using this project please give it a star. Thanks!
   Algorithm.Sorting.Use{ALGORITHM_NAME}<TYPE>(ISortingAlgorithmFactory sortingAlgorithmFactory, <TYPE> input,  IComparer<TYPE>);        
   string sortedString = Algorithm.Sorting.Use{ALGORITHM_NAME}(string input);
    string sortedString = Algorithm.Sorting.Use{ALGORITHM_NAME}(string input, {IComparer<char>});
-  /*
-  Note: IComparer<T> must always
-          - return 1 if first element > second element
-          - return -1 if first element < second element
-          - return 0 if first element == second element
-   */
+ 
 ```  
    
-    
-  
-
-
-
 ## Usage (Sorting)
 
 ```c#
      // sorting array of integers
      int[] data = new int[] { 5,3,8,5,1,0,8 };
      Algorithm.Sorting.UseCocktail(data, new IntegerComparer());
+     
      // sorting array of string based on the length
      string[] data = new string[] { "hello", null, "i", "am", null, "good", string.Empty, " "};
      Algorithm.Sorting.UseCocktail( data, new StringLengthComparer());
+     
      // sorting date time
      DateTime[] data = new DateTime[] { DateTime.Now.AddDays(3), DateTime.Now.AddSeconds(10), DateTime.Now.AddSeconds(-100), DateTime.Now.AddDays(1) };
      Algorithm.Sorting.UseCocktail(data, new DateTimeComparer());
+     
      // sorting class based on the custom comparer
      List<Person> people = new List<Person>();
-     Algorithm.Sorting.UseCocktail(data, new PersonAgeComparer());
+     Algorithm.Sorting.UseCocktail(data, new PersonAgeComparer());    
+    
+```
+## Available IComparer<T>  (Sorting)
+
+-  AsciiValueComparer
+-  DateTimeComparer
+-  IntegerComparer
+-  StringLengthComparer
+
+New comparer must implement IComparer<T> interface
+> IComparer<T> must always
+>   - return 1 if first element > second element
+>   - return -1 if first element < second element
+>   - return 0 if first element == second element
+ 
+```c#
+
+    public class PersonAgeComparer : IComparer<Person>
+    {
+        public int Compare(Person x, Person y)
+        {
+            if (x.Age > y.Age)
+                return 1;
+            if (x.Age < y.Age)
+                return -1;
+            return 0;
+        }
+    }
+
 ```
 ## Supported algorithms (Sorting)
 
