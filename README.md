@@ -1,10 +1,18 @@
 # Vishnu.Extensions
-## This package supports various algorithms for
+
+This package contains
+
+> Algorithms for (NuGet: [Vishnu.Algorithm.Extensions](https://www.nuget.org/packages/Vishnu.Algorithm.Extensions/) )
    - Sorting contents.
    - Pattern searching in strings
+> Dotnet extensions for (NuGet:)
+   - Object
+   - String
+   
 ## Give a Star! :star:
 If you like or are using this project please give it a star. Thanks!
 
+# Algorithms  [ NuGet: [Vishnu.Algorithm.Extensions](https://www.nuget.org/packages/Vishnu.Algorithm.Extensions/) ]
 
 # 1. Sorting
 
@@ -175,4 +183,38 @@ New algorithms can be added by extending ** IPattern ** interface using extensio
 
 1. https://www.geeksforgeeks.org
 2. https://www.programmingalgorithms.com
+
+# Dotnet Extensions  [ NuGet:  ]
+
+## 1. String
+
+namespace : using Vishnu.Extensions.String
+- string result = "hello".GetMd5Hash();
+- bool result = "one".ToTryEnum<NumberEnum>(true, out numberEnum); // ignore case
+- string result = "Hi {0} --> {1}".GetInFormat("dude", "how are you");
+- bool result = "One".In(true, "one", "two", "three");
+- bool result = "on,e".In(',','.');
+- bool result = "One".In(true, new List<string>() { "one", "two", "three" });
+- bool result = "on>e".In(new List<char> { ',', '.' });
+- bool result = "one".AppearInAll("one", "two one dsafa", "three one dafasf");   
+- result = "one".AppearInAll(new List<string>() { "one", "two one dsafa", "three one dafasf" });
+- result = "one".AppearInAny("", "two dsafa", "three one dafasf");
+- result = "one".AppearInAny(new List<string>() { "", "two  dsafa", "three one dafasf" });   
+
+## 2. Object
+
+ namespace : using Vishnu.Extensions.Object
+ 
+- this.SetLogLevel("All");
+- this.LogBegin(() => "Hellow world");
+- this.LogEnd(() => "Hellow world");
+- this.LogDebug(() => "Hellow world");
+- this.LogError(() => "Hellow world");
+- this.LogExeception(new System.Exception("Hellow world"));
+- this.LogFunctional(() => "Hellow world");
+- this.LogInformation(() => "Hellow world");
+- this.LogWarning(() => "Hellow world");
+
+
+
 
