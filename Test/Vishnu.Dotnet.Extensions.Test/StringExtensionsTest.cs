@@ -19,9 +19,8 @@ namespace Vishnu.Dotnet.Extensions.Test
         [Test]
         public void GetMd5Hash_Test()
         {
-            string content = "hello";
-            var hash = content.GetMd5Hash();
-            var hash1 = content.GetMd5Hash();
+            var hash = "hello".GetMd5Hash();
+            var hash1 = "hello".GetMd5Hash();
             Assert.AreEqual(hash, hash1);
         }
 
