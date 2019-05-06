@@ -130,9 +130,11 @@ New algorithms can be added by extending ** ISorting ** interface using extensio
 
 ```c#
 
-     var text = "THIS IS A TEST TSET";
-     var pattern = "TEST";            
-     var result = Algorithm.PatternSearch.UseAnagram(text, pattern);  
+     var text = "AABAACAADAABAAABAA";
+     var pattern = "AABA";            
+     var result = Algorithm.PatternSearch.UseNaive(text, pattern);  
+     
+     // result = { 0, 9, 13 }
      
 ```
 
