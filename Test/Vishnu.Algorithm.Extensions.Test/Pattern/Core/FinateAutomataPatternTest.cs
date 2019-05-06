@@ -25,7 +25,5 @@ namespace Vishnu.Extensions.Test.Sorting.Core
             result = Algorithm.PatternSearch.UseFinateAutomata(text, pattern);
             Assert.AreEqual(exptecedResult, result);
         }
-
-
     }
 }

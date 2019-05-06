@@ -2,6 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Description>Package contains algorithms for
+1. Performing patten searching on string
+2. Performing sorting on Content</Description>
+    <PackageProjectUrl></PackageProjectUrl>
+    <RepositoryUrl>https://github.com/tgvishnu/Vishnu.Extensions</RepositoryUrl>
+    <PackageTags>Algorithms Sort Pattern Search PatternSearching String Extension Sort Search</PackageTags>
   </PropertyGroup>
 
 </Project>
