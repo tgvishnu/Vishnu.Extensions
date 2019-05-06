@@ -373,5 +373,36 @@ namespace Vishnu.Extensions.StringType
 
             return bValid;
         }
+
+        /// <summary>
+        /// Returns string with initial letter caps
+        /// </summary>
+        /// <param name="content"></param>
+        /// <returns></returns>
+        public static string InitCaps(this string content)
+        {
+            if (string.IsNullOrEmpty(content))
+            {
+                return string.Empty;
+            }
+
+            return content.Substring(0, 1).ToUpper() + content.Substring(1, content.Length - 1).ToLower();
+        }
+
+        /// <summary>
+        /// Count number of words in given string
+        /// </summary>
+        /// <param name="content">content</param>
+        /// <param name="separaters">list of separaters</param>
+        /// <returns>number of words in given string</returns>
+        public static int WordCount(this string content, IList<char> separaters )
+        {
+            if(separaters == null || separaters.Count == 0)
+            {
+                return 0;
+            }
+
+            return content.Split(separaters.ToArray(), StringSplitOptions.RemoveEmptyEntries).Length;
+        }
     }
 }

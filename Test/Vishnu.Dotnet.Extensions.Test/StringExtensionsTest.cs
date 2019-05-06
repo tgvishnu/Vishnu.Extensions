@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using Vishnu.Extensions.StringType;
 
@@ -113,7 +114,7 @@ namespace Vishnu.Dotnet.Extensions.Test
         [Test]
         public void SplitOnSize_Test()
         {
-            string longString = "This is a very long string, which we want to split on smaller parts every max. 30 characters long."; // Length: 98
+            string longString = "This is a very long string, which we want to split on smaller parts every max. 30 characters long."; 
             var partLength = 30;
             var parts = longString.SplitOnSize(partLength);
             Assert.AreEqual(parts.Count, 4);
@@ -129,9 +130,23 @@ namespace Vishnu.Dotnet.Extensions.Test
         [Test]
         public void SplitOnLength_Test()
         {
-            string longString = "This is a very long string"; // Length: 98
+            string longString = "This is a very long string"; 
             var parts = longString.SplitOnSize(new List<int>() { 3, 5, 3 });
             Assert.AreEqual(parts.Count, 3);
+        }
+
+        [Test]
+        public void InitCaps_Test()
+        {
+            Assert.AreEqual("hello".InitCaps(), "Hello");
+        }
+
+        [Test]
+        public void WordCount_Test()
+        {
+            string longString = "This is a very long string.  I am good.";
+            var parts = longString.WordCount(new List<char> { ' ', ',', '.' });
+            Assert.AreEqual(parts, 9);
         }
     }
 }

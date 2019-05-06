@@ -13,7 +13,7 @@ namespace Vishnu.Dotnet.Extensions.Test
         public void ToFileSizeTest()
         {
             long l = 342113412;
-            var result = l.ToFileSize();
+            var result = 342113412L.ToFileSize();
             Assert.AreEqual("326MB", result);
         }
     }
