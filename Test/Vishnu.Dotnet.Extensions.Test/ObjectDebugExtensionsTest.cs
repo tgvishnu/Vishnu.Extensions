@@ -1,6 +1,6 @@
 using NUnit.Framework;
 using System.Collections.Concurrent;
-using Vishnu.Extensions.Object;
+using Vishnu.Extensions.ObjectType;
 namespace Tests
 {
     [TestFixture]

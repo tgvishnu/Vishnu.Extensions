@@ -14,15 +14,10 @@ namespace Vishnu.Extensions.Test.Sorting.Core
         [Test]
         public void SuccessTest()
         {
-            string text = "ABABDABACDABABCABAB";
-            string pattern = "ABABCABAB";
-            IList<int> exptecedResult = new List<int>() {  10 };
+            string text = "THIS IS A TEST TEXT";
+            string pattern = "TEST";
+            var exptecedResult = new List<int>() { 10 };
             var result = Algorithm.PatternSearch.UseRabinKrap(text, pattern, 101);
-            Assert.AreEqual(exptecedResult, result);
-            text = "THIS IS A TEST TEXT";
-            pattern = "TEST";
-            exptecedResult = new List<int>() { 10 };
-            result = Algorithm.PatternSearch.UseRabinKrap(text, pattern, 101);
             Assert.AreEqual(exptecedResult, result);
         }
     }

@@ -2,12 +2,12 @@
 using System.IO;
 using System.Text;
 
-namespace Vishnu.Extensions.String
+namespace Vishnu.Extensions.StringType
 {
     /// <summary>
     /// String file extensions
     /// </summary>
-    public static class FileExtension
+    public static partial class StringExtensions
     {
         /// <summary>
         /// Copy file from source to destination

@@ -5,12 +5,12 @@ using System.Net.NetworkInformation;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace Vishnu.Extensions.String
+namespace Vishnu.Extensions.StringType
 {
     /// <summary>
     /// String network extension
     /// </summary>
-    public static partial class NetworkExtensions
+    public static partial class StringExtensions
     {
         /// <summary>
         /// Send mail

@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using Vishnu.Extensions.String;
+using Vishnu.Extensions.StringType;
 
 namespace Vishnu.Dotnet.Extensions.Test
 {
@@ -49,9 +49,9 @@ namespace Vishnu.Dotnet.Extensions.Test
             result = "One".In(false, "one", "two", "three");
             Assert.AreEqual(false, result);
 
-            result = "on,e".In(',','.');
+            result = "on,e".In(',', '.');
             Assert.AreEqual(true, result);
-            result = "on,e".In(new List<char>{ ',', '.'});
+            result = "on,e".In(new List<char> { ',', '.' });
             Assert.AreEqual(true, result);
 
             result = "on?e".In(',', '.');
@@ -64,7 +64,12 @@ namespace Vishnu.Dotnet.Extensions.Test
             result = "One".In(false, new List<string>() { "one", "two", "three" });
             Assert.AreEqual(false, result);
 
-            result = "one".AppearInAll("one", "two one dsafa", "three one dafasf");
+        }
+
+        [TestCase]
+        public void AppearInAll_Test()
+        {
+            var result = "one".AppearInAll("one", "two one dsafa", "three one dafasf");
             Assert.AreEqual(true, result);
             result = "one".AppearInAll("one", "two one dsafa", "three dafasf");
             Assert.AreEqual(false, result);
@@ -73,7 +78,12 @@ namespace Vishnu.Dotnet.Extensions.Test
             result = "one".AppearInAll(new List<string>() { "one", "two dsafa", "three one dafasf" });
             Assert.AreEqual(false, result);
 
-            result = "one".AppearInAny("", "two dsafa", "three one dafasf");
+        }
+
+        [Test]
+        public void AppearInAny_Test()
+        {
+            var result = "one".AppearInAny("", "two dsafa", "three one dafasf");
             Assert.AreEqual(true, result);
             result = "one".AppearInAny("", "two  dsafa", " dafasf");
             Assert.AreEqual(false, result);
@@ -81,6 +91,39 @@ namespace Vishnu.Dotnet.Extensions.Test
             Assert.AreEqual(true, result);
             result = "one".AppearInAny(new List<string>() { "", " dsafa", "three  dafasf" });
             Assert.AreEqual(false, result);
+        }
+
+        [Test]
+        public void GetDigits_Test()
+        { 
+            var resString = "ab23-432-5dfg".GetDigits();
+            Assert.AreEqual("234325", resString);
+        }
+
+        [Test]
+        public void Position_Test()
+        {
+            var input = "hello";
+            Assert.AreEqual(input.RemoveLast(2), "hel");
+            Assert.AreEqual(input.RemoveLastCharacter(), "hell");
+            Assert.AreEqual(input.RemoveFirst(2), "llo");
+            Assert.AreEqual(input.RemoveFirstCharacter(), "ello");
+        }
+
+        [Test]
+        public void SplitIntoParts_Test()
+        {
+            string longString = "This is a very long string, which we want to split on smaller parts every max. 30 characters long."; // Length: 98
+            var partLength = 30;
+            var parts = longString.SplitIntoParts(partLength);
+            Assert.AreEqual(parts.Count, 4);
+        }
+
+        [Test]
+        public void Palandrome_Test()
+        {
+            Assert.AreEqual(false, "earljon".IsPalindrome());
+            Assert.AreEqual(true, "abcba".IsPalindrome());
         }
     }
 }

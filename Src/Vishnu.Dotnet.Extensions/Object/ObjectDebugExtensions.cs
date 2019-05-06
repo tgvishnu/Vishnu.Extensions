@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.Text;
 
-namespace Vishnu.Extensions.Object
+namespace Vishnu.Extensions.ObjectType
 {
     /// <summary>
     /// Debug extensions

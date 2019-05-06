@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace Vishnu.Extensions.String
+namespace Vishnu.Extensions.StringType
 {
     /// <summary>
     /// String Criptography extensions
     /// </summary>
-    public static class CryptographyExtension
+    public static partial class StringExtensions
     {
         /// <summary>
         /// Get MD5 has of the content
