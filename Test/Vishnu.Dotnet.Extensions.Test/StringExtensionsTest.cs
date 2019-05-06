@@ -111,11 +111,11 @@ namespace Vishnu.Dotnet.Extensions.Test
         }
 
         [Test]
-        public void SplitIntoParts_Test()
+        public void SplitOnSize_Test()
         {
             string longString = "This is a very long string, which we want to split on smaller parts every max. 30 characters long."; // Length: 98
             var partLength = 30;
-            var parts = longString.SplitIntoParts(partLength);
+            var parts = longString.SplitOnSize(partLength);
             Assert.AreEqual(parts.Count, 4);
         }
 
@@ -124,6 +124,14 @@ namespace Vishnu.Dotnet.Extensions.Test
         {
             Assert.AreEqual(false, "earljon".IsPalindrome());
             Assert.AreEqual(true, "abcba".IsPalindrome());
+        }
+
+        [Test]
+        public void SplitOnLength_Test()
+        {
+            string longString = "This is a very long string"; // Length: 98
+            var parts = longString.SplitOnSize(new List<int>() { 3, 5, 3 });
+            Assert.AreEqual(parts.Count, 3);
         }
     }
 }

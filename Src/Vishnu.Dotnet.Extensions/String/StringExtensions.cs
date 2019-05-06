@@ -299,20 +299,57 @@ namespace Vishnu.Extensions.StringType
         /// Split the string into parts
         /// </summary>
         /// <param name="content">content</param>
-        /// <param name="partLength">part length</param>
+        /// <param name="size">part size</param>
         /// <returns>collection of parts</returns>
-        public static IList<string> SplitIntoParts(this string content, int partLength)
+        public static IList<string> SplitOnSize(this string content, int size)
         {
             var result = new List<string>();
             int partIndex = 0;
             int length = content.Length;
             while (length > 0)
             {
-                var tempPartLength = length >= partLength ? partLength : length;
-                var part = content.Substring(partIndex * partLength, tempPartLength);
+                var tempPartLength = length >= size ? size : length;
+                var part = content.Substring(partIndex * size, tempPartLength);
                 result.Add(part);
                 partIndex++;
-                length -= partLength;
+                length -= size;
+            }
+
+            return result;
+        }
+
+        /// <summary>
+        /// Split the contents based on the required sizes
+        /// </summary>
+        /// <param name="content">content</param>
+        /// <param name="variableLengths">variable lengths</param>
+        /// <returns></returns>
+        public static IList<string> SplitOnSize(this string content, IList<int> variableLengths)
+        {
+            List<string> result = new List<string>();
+            result.Clear();
+            try
+            {
+                if (!string.IsNullOrEmpty(content) && variableLengths != null)
+                {
+                    int maxLenght = variableLengths.Sum();
+                    if (content.Length >= maxLenght)
+                    {
+                        int start = 0;
+                        int end = 0;
+                        for (int ii = 0; ii < variableLengths.Count; ii++)
+                        {
+                            end = variableLengths[ii];
+                            result.Add(content.Substring(start, end));
+                            start = start + end;
+                        }
+                    }
+                }
+            }
+            catch
+            {
+                //// incase of any exceptions while parsing.
+                result = new List<string>();
             }
 
             return result;
