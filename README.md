@@ -8,6 +8,8 @@ This package contains
 > Dotnet extensions for (NuGet:)
    - Object
    - String
+   - DateTime
+   - Long   
    
 ## Give a Star! :star:
 If you like or are using this project please give it a star. Thanks!
@@ -188,7 +190,7 @@ New algorithms can be added by extending ** IPattern ** interface using extensio
 
 ## 1. String
 
-namespace : using Vishnu.Extensions.String
+namespace : using Vishnu.Extensions.StringType
 - string result = "hello".GetMd5Hash();
 - bool result = "one".ToTryEnum<NumberEnum>(true, out numberEnum); // ignore case
 - string result = "Hi {0} --> {1}".GetInFormat("dude", "how are you");
@@ -200,10 +202,18 @@ namespace : using Vishnu.Extensions.String
 - bool result = "one".AppearInAll(new List<string>() { "one", "two one dsafa", "three one dafasf" });
 - bool result = "one".AppearInAny("", "two dsafa", "three one dafasf");
 - bool result = "one".AppearInAny(new List<string>() { "", "two  dsafa", "three one dafasf" });   
+- string resString = "ab23-432-5dfg".GetDigits();
+- string result = "hello".RemoveLast(2)
+- string result = "hello".RemoveLastCharacter(2)
+- string result = "hello".RemoveFirst(2)
+- string result = "hello".RemoveFirstCharacter(2)   
+- IList<string> parts = "asdfaf asd gagasfda a ".SplitOnSize(3);
+- IList<string> parts = "asdfaf asd gagasfda a ".SplitOnSize(new List<int>() { 3, 5, 3 });   
+- bool result = "earljon".IsPalindrome();   
 
 ## 2. Object
 
- namespace : using Vishnu.Extensions.Object
+ namespace : using Vishnu.Extensions.ObjectType
  
 - this.SetLogLevel("All");
 - this.LogBegin(() => "Hellow world");
@@ -215,6 +225,17 @@ namespace : using Vishnu.Extensions.String
 - this.LogInformation(() => "Hellow world");
 - this.LogWarning(() => "Hellow world");
 
+## 3. Long
 
+namespace : using Vishnu.Extensions.LongType
+
+- string size = 342113412; var result = l.ToFileSize();
+
+## 4. DateTime
+
+namespace : using Vishnu.Extensions.DateTimeType
+
+- bool result = DateTime.Now.Between(DateTime.Now, DateTime.Now.AddDays(2));
+- int age = new DateTime(1983, 06, 10).Age();
 
 
