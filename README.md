@@ -197,9 +197,9 @@ namespace : using Vishnu.Extensions.String
 - bool result = "One".In(true, new List<string>() { "one", "two", "three" });
 - bool result = "on>e".In(new List<char> { ',', '.' });
 - bool result = "one".AppearInAll("one", "two one dsafa", "three one dafasf");   
-- result = "one".AppearInAll(new List<string>() { "one", "two one dsafa", "three one dafasf" });
-- result = "one".AppearInAny("", "two dsafa", "three one dafasf");
-- result = "one".AppearInAny(new List<string>() { "", "two  dsafa", "three one dafasf" });   
+- bool result = "one".AppearInAll(new List<string>() { "one", "two one dsafa", "three one dafasf" });
+- bool result = "one".AppearInAny("", "two dsafa", "three one dafasf");
+- bool result = "one".AppearInAny(new List<string>() { "", "two  dsafa", "three one dafasf" });   
 
 ## 2. Object
 
