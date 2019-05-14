@@ -10,6 +10,7 @@ This package contains
    - String
    - DateTime
    - Long   
+   - Array
    
 ## Give a Star! :star:
 If you like or are using this project please give it a star. Thanks!
@@ -238,4 +239,12 @@ namespace : using Vishnu.Extensions.DateTimeType
 - bool result = DateTime.Now.Between(DateTime.Now, DateTime.Now.AddDays(2));
 - int age = new DateTime(1983, 06, 10).Age();
 
+## 4. Array
+
+namespace : using Vishnu.Extensions.ArrayType
+```c#
+  var input = new byte[] { 0x0D, 0x0A, 0x7e, 0x7d };
+  var stuffedContent = input.PPPByteStuff();
+  var originalData = stuffedContent.PPPByteDeStuff();
+```
 
